@@ -1,0 +1,3 @@
+ls -al ~/.my*
+cp -fr ~/.myalias ~/Dropbox/Config-Settings/bash/macmini2/
+ls -al ~/.myalias ~/Dropbox/Config-Settings/bash/macmini2
