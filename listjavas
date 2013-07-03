@@ -1,0 +1,11 @@
+clear
+echo
+echo "*** Oracle Java Versions ***"
+ls /Library/Java/JavaVirtualMachines
+echo
+echo '*** Apple Java Versions ***'
+ls /System/Library/Frameworks/JavaVM.framework/Versions
+echo
+echo '*** Full List of Available Java VMs ***'
+/usr/libexec/java_home -V
+echo
