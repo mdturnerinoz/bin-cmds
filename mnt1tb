@@ -1,0 +1,3 @@
+diskutil umount /dev/disk4s1
+Mkdir /Volumes/WDSATA1TB
+diskutil mount readOnly -mountPoint /Volumes/WDSATA1TB /dev/disk4s1
