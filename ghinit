@@ -1,4 +1,11 @@
 #!/bin/sh
+if [ -z "$1" ]
+  then
+    echo
+    echo "must have git repos name ..."
+    echo
+    exit 1
+fi
 touch README.md
 git init
 git add README.md
