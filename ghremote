@@ -1,3 +1,10 @@
 #!/bin/sh
+if [ -z "$1" ]
+  then
+    echo
+    echo "must have git repos name ..."
+    echo
+    exit 1
+fi
 git remote add origin https://github.com/mdturnerinoz/$1.git
 git push -u origin master
