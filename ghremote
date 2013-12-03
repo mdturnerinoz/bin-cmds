@@ -1,2 +1,3 @@
-git remote add origin https://github.com/mdturnerinoz/cpp-inheritance.git
+#!/bin/sh
+git remote add origin https://github.com/mdturnerinoz/$1.git
 git push -u origin master
