@@ -1,0 +1,4 @@
+# configure gdb for building on a Mac; remove the warnings to 
+#               errors setting
+./configure --disable-werror --prefix=/Users/marty/gdb
+
