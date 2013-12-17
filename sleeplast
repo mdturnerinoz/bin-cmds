@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ -z "$1" ] ;
+then
+  cnt=2
+else 
+  cnt=$1
+fi
+#echo cnt: $cnt
+pmset -g log|grep -e "Wake \[CDNVA" -e "Software Sleep " | tail -n $cnt
