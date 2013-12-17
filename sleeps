@@ -1,0 +1,3 @@
+#!/bin/sh
+pmset -g log | grep sleep | tail -n 1
+
