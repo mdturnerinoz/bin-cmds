@@ -1,8 +1,8 @@
 #
-# sleeplast - display recnet Mac sleep actions via pmset, grep, and tail
+# sleeplast - display recent Mac sleep actions via pmset, grep, and tail
 #
 # This command is used to make sure that your Mac is going to sleep as 
-# You expect it to: you can monitor that it's slepping as expected to 
+# You expect it to: you can monitor that it's sleeping as expected to 
 # save you disk and battery life as well as energy if mains-connected.
 #
 # params: number of latest sleep events to display (default 2)
