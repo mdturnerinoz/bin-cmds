@@ -7,5 +7,8 @@ git config --global diff.tool compare
 git config --global difftool.compare.cmd 'compare $LOCAL $REMOTE'
 git config --global difftool.prompt false
 #
-# At some TBD time I'll have to setup of mergetools too ...
+# Apply similar definitions for the git mergetool (TBD ensure this works)
 #
+git config --global merge.tool compare
+git config --global mergetool.compare.cmd 'compare $LOCAL $REMOTE'
+git config --global mergetool.prompt false
