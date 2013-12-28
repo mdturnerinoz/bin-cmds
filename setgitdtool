@@ -1,0 +1,18 @@
+#
+# set the properties common to difftool and mergetool
+#
+git config --global --add difftool.prompt  false
+git config --global --add mergetool.prompt false
+
+#
+# set the mergetoll-specific properties
+#
+git config --global mergetool.araxis.trustExitCode true
+git config --global mergetool.araxis.path '/Applications/Araxis\ Merge.app/Contents/Utilities/compare'
+git config --global mergetool.keepBackup false
+
+#
+# set the difftool-specific properties
+#
+git config --global difftool.araxis.trustExitCode true
+git config --global difftool.araxis.path '/Applications/Araxis\ Merge.app/Contents/Utilities/compare'
