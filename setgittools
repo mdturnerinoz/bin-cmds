@@ -1,3 +1,11 @@
+#
+# setup the git difftool and its properties (this relies on $PATH being 
+# updated with /Applications/Araxis Merge.app/Contents/Utilities so 
+# that the Araxis version of"compare" et al is $PATH accessible.)
+#
 git config --global diff.tool compare
 git config --global difftool.compare.cmd 'compare $LOCAL $REMOTE'
 git config --global difftool.prompt false
+#
+# At some TBD time I'll have to setup of mergetools too ...
+#
