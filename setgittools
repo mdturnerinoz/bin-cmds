@@ -1,0 +1,3 @@
+git config --global diff.tool compare
+git config --global difftool.compare.cmd 'compare $LOCAL $REMOTE'
+git config --global difftool.prompt false
