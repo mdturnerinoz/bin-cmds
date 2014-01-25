@@ -8,3 +8,4 @@ if [ -z "$1" ]
 fi
 git remote add origin https://github.com/mdturnerinoz/$1.git
 git push -u origin master
+

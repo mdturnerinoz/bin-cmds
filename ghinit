@@ -12,3 +12,4 @@ git add README.md
 git commit -m "commit README.md"
 git remote add origin https://github.com/mdturnerinoz/$1.git
 git push -u origin master
+
