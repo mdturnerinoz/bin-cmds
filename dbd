@@ -1,0 +1,12 @@
+#
+# dbd, dashbd, dashboard: set the Mac Dock dashboard off (true) or on (false)
+#
+#!/bin/bash
+if [ -z "$1" ] ;
+then
+  mybool="true"
+else 
+  mybool=$1
+fi
+defaults write com.apple.dashboard mcx-disabled -boolean $mybool
+killall Dock
