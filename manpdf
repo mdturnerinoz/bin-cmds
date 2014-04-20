@@ -1,0 +1,18 @@
+#
+# manpdf: convert a man page to a pdf file
+#
+#!/bin/bash
+if [ -z "$1" ] ;
+then
+  echo
+  echo 'You must specify a man page name ...'
+  echo
+  exit 1
+else 
+  manpage=$1
+fi
+man -t $manpage > $manpage.ps
+ps2pdf $manpage.ps $manpage.pdf
+echo 
+echo $manpage.pdf created ...
+echo
