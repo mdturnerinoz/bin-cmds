@@ -1,6 +1,8 @@
 #
 # man2html: convert a man page to a pdf file
-# syntax:  man2html <manpage-name> [<directory>] (default: /Users/user/Desktop)
+# syntax:  man2html <manpage-name> 
+#                   [<directory>] (default: /Users/user/Desktop)
+#                   o (open the document after creation)
 #
 #!/bin/bash
 if [ -z "$1" ] ;
@@ -17,10 +19,14 @@ fi
 if [ -z "$2" ] ;
 then
   dirout=.
+  openhtml=1
 else 
   dirout=$2
 fi
-#echo dirout is $dirout
+if [ -n "$3" ] ; 
+then
+  openhtml=1
+fi
 if [ ! -d "$dirout" ]
 then
   echo 
@@ -66,7 +72,17 @@ rm -f $dirout/$manpage.pdf
 #
 # BUG: Because of the pdf2htmlex output file bug, we need to copy this if not "./" 
 #
-if [ "$dirout" != "." ] ; then
+if [ "$dirout" != "." ] ; 
+then
   cp ./$manpage.html $dirout/.
   rm -f ./$manpage.html
+fi
+if [ $openhtml ] ; 
+then
+  if [ $dirout == "." ] ;
+  then
+    open ./$manpage.html
+  else
+    open $dirout/$manpage.html
+  fi
 fi
