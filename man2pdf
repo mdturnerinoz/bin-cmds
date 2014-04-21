@@ -16,7 +16,7 @@ else
 fi
 if [ -z "$2" ] ;
 then
-  dirout=$HOME/Desktop
+  dirout=.
 else 
   dirout=$2
 fi

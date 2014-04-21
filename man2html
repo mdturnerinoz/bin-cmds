@@ -16,7 +16,7 @@ else
 fi
 if [ -z "$2" ] ;
 then
-  dirout=$HOME/Desktop
+  dirout=.
 else 
   dirout=$2
 fi
@@ -28,6 +28,7 @@ then
   echo
   exit 1
 fi
+rm -f $dirout/$manpage.ps $dirout/$manpage.pdf $dirout/$manpage.html
 man -t $manpage > $dirout/$manpage.ps 2> /dev/null
 ret=$?
 if [ $ret -gt 0 ] ;
@@ -37,7 +38,7 @@ then
   echo
   exit 1
 fi
-ps2pdf $dirout/$manpage.ps $dirout/$manpage.pdf
+ps2pdf $dirout/$manpage.ps $dirout/$manpage.pdf 2> /dev/null
 if [ $? -gt 0 ] ;
 then
   echo 'ps2pdf' failed error $? ...
@@ -45,14 +46,18 @@ then
 else
   rm -f $dirout/$manpage.ps
 fi
-pdf2htmlex $dirout/$manpage.pdf $dirout/$manpage.html 
-if [ $? -gt 0 ] ;
+echo pdf2htmlex --auto-hint 1 $dirout/$manpage.pdf $dirout/$manpage.html
+pdf2htmlex --auto-hint 1 $dirout/$manpage.pdf $dirout/$manpage.html 
+ret=$?
+if [ $ret -gt 1 ] ;
 then
-  echo 'pdf2htmlex' failed error $? ...
-  exit 1
-else
+  echo
+  echo 'pdf2htmlex' failed error $ret ...
+  echo
   rm -f $dirout/$manpage.pdf
+  exit 1
 fi
 echo 
 echo $dirout/$manpage.html created ...
 echo
+rm -f $dirout/$manpage.pdf
