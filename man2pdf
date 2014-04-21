@@ -33,5 +33,5 @@ then
   rm -f $dirout/$manpage.ps
 fi
 echo 
-echo $manpage.pdf created ...
+echo $dirout/$manpage.pdf created ...
 echo
