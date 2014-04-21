@@ -1,6 +1,8 @@
 #
 # man2pdf: convert a man page to a pdf file
-# syntax:  man2pdf <manpage-name> [<directory>] (default: /Users/user/Desktop)
+# syntax:  man2pdf <manpage-name> 
+#                  [<directory>] (default: /Users/user/Desktop)
+#                  [0]
 #
 #!/bin/bash
 if [ -z "$1" ] ;
@@ -17,6 +19,7 @@ fi
 if [ -z "$2" ] ;
 then
   dirout=.
+  open=1
 else 
   dirout=$2
 fi
@@ -27,6 +30,10 @@ then
   echo "Volume or direcotry" \'$dirout\' does not exist...
   echo
   exit 1
+fi
+if [ ! -z $3 ]; 
+then
+  open=1
 fi
 man -t $manpage > $dirout/$manpage.ps 2> /dev/null
 ret=$?
@@ -45,3 +52,7 @@ fi
 echo 
 echo $dirout/$manpage.pdf created ...
 echo
+if [ $open ] ; 
+then
+  open $dirout/$manpage.pdf
+fi
