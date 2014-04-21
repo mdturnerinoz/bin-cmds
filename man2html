@@ -46,8 +46,10 @@ then
 else
   rm -f $dirout/$manpage.ps
 fi
-echo pdf2htmlex --auto-hint 1 $dirout/$manpage.pdf $dirout/$manpage.html
-pdf2htmlex --auto-hint 1 $dirout/$manpage.pdf $dirout/$manpage.html 
+#
+# BUG: The "output" parameter causes an error if specified, so we default 
+#
+pdf2htmlex $dirout/$manpage.pdf 2> /dev/null
 ret=$?
 if [ $ret -gt 1 ] ;
 then
@@ -61,3 +63,10 @@ echo
 echo $dirout/$manpage.html created ...
 echo
 rm -f $dirout/$manpage.pdf
+#
+# BUG: Because of the pdf2htmlex output file bug, we need to copy this if not "./" 
+#
+if [ "$dirout" != "." ] ; then
+  cp ./$manpage.html $dirout/.
+  rm -f ./$manpage.html
+fi
