@@ -21,11 +21,12 @@ else
   dirout=$2
 fi
 #echo dirout is $dirout
-man -t $manpage > $dirout/$manpage.ps
-if [ $? -gt 0 ] ;
+man -t $manpage > $dirout/$manpage.ps 2> /dev/null
+ret=$?
+if [ $ret -gt 0 ] ;
 then
   echo
-  echo The \'$manpage\' manpage was not found or errors encountered ...
+  echo The \'$manpage\' man page not found: error $ret encountered ...
   echo
   exit 1
 fi
