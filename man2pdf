@@ -1,5 +1,6 @@
 #
-# manpdf: convert a man page to a pdf file
+# man2pdf: convert a man page to a pdf file
+# syntax:  man2pdf <manpage-name> [<directory>] (default: /Users/user/Desktop)
 #
 #!/bin/bash
 if [ -z "$1" ] ;
@@ -11,8 +12,26 @@ then
 else 
   manpage=$1
 fi
-man -t $manpage > $manpage.ps
-ps2pdf $manpage.ps $manpage.pdf
+if [ -z "$2" ] ;
+then
+  dirout=/Users/`whoami`/Desktop
+else 
+  dirout=$2
+fi
+#echo dirout is $dirout
+man -t $manpage > $dirout/$manpage.ps
+if [ $? -gt 0 ] ;
+then
+  echo
+  echo The \'$manpage\' manpage was not found or errors encountered ...
+  echo
+  exit 1
+fi
+ps2pdf $dirout/$manpage.ps $dirout/$manpage.pdf
+if [ $? -eq 0 ] ;
+then
+  rm -f $dirout/$manpage.ps
+fi
 echo 
 echo $manpage.pdf created ...
 echo
