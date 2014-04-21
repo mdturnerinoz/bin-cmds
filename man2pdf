@@ -8,13 +8,15 @@ then
   echo
   echo 'You must specify a man page name ...'
   echo
+  echo syntax: 'man2pdf <manpage-name> [<directory>] (default:' $HOME'/Desktop)'
+  echo 
   exit 1
 else 
   manpage=$1
 fi
 if [ -z "$2" ] ;
 then
-  dirout=/Users/`whoami`/Desktop
+  dirout=$HOME/Desktop
 else 
   dirout=$2
 fi
