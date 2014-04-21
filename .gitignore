@@ -2,4 +2,6 @@ git*
 gdb*
 *.pdf
 *.ps
+*.html
+
 

@@ -1,0 +1,58 @@
+#
+# man2html: convert a man page to a pdf file
+# syntax:  man2html <manpage-name> [<directory>] (default: /Users/user/Desktop)
+#
+#!/bin/bash
+if [ -z "$1" ] ;
+then
+  echo
+  echo 'You must specify a man page name ...'
+  echo
+  echo syntax: 'man2html <manpage-name> [<directory>] (default:' $HOME'/Desktop)'
+  echo 
+  exit 1
+else 
+  manpage=$1
+fi
+if [ -z "$2" ] ;
+then
+  dirout=$HOME/Desktop
+else 
+  dirout=$2
+fi
+#echo dirout is $dirout
+if [ ! -d "$dirout" ]
+then
+  echo 
+  echo "Volume or direcotry" \'$dirout\' does not exist...
+  echo
+  exit 1
+fi
+man -t $manpage > $dirout/$manpage.ps 2> /dev/null
+ret=$?
+if [ $ret -gt 0 ] ;
+then
+  echo
+  echo The \'$manpage\' man page not found: error $ret encountered ...
+  echo
+  exit 1
+fi
+ps2pdf $dirout/$manpage.ps $dirout/$manpage.pdf
+if [ $? -gt 0 ] ;
+then
+  echo 'ps2pdf' failed error $? ...
+  exit 1
+else
+  rm -f $dirout/$manpage.ps
+fi
+pdf2htmlex $dirout/$manpage.pdf $dirout/$manpage.html 
+if [ $? -gt 0 ] ;
+then
+  echo 'ps2pdf' failed error $? ...
+  exit 1
+else
+  rm -f $dirout/$manpage.pdf
+fi
+echo 
+echo $dirout/$manpage.html created ...
+echo
