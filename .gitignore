@@ -3,5 +3,7 @@ gdb*
 *.pdf
 *.ps
 *.html
+*.bz2
+
 
 

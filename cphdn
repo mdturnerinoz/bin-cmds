@@ -1,4 +1,4 @@
 #!/bin/bash
-tar jcvf ~/bin/cphdn.tgz ~/.my* ~/.bash* ~/.vi* ~/.ssh*
-cp -f ~/bin/cphdn.tgz /Volumes/SG15TB/.
-cp -f ~/bin/cphdn.tgz /Volumes/SG4TB/.
+tar jcvf ~/bin/cphdn.bz2 ~/.my* ~/.bash* ~/.vi* ~/.ssh* ~/.gitig*
+cp -f ~/bin/cphdn.bz2 /Volumes/SG15TB/.
+cp -f ~/bin/cphdn.bz2 /Volumes/SG4TB/.
