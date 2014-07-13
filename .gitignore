@@ -5,5 +5,10 @@ gdb*
 *.html
 *.bz2
 *.tgz
+*.pdf
+*.txt
+*.html
+myfoo
+
 
 

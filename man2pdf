@@ -27,7 +27,7 @@ fi
 if [ ! -d "$dirout" ]
 then
   echo 
-  echo "Volume or direcotry" \'$dirout\' does not exist...
+  echo "Volume or directory" \'$dirout\' does not exist...
   echo
   exit 1
 fi
