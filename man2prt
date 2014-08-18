@@ -1,0 +1,19 @@
+#
+# man2prt: print a man page
+# syntax:  man2prt <manpage-name> 
+#
+#!/bin/bash
+if [ -z "$1" ] ;
+then
+  echo
+  echo 'You must specify a man page name ...'
+  echo
+  echo syntax: 'man2prt <manpage-name>'
+  echo 
+  exit 1
+else 
+  manpage=$1
+fi
+man $manpage | col -b | lp -o sides=two-sided-long-edge
+
+

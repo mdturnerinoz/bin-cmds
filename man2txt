@@ -1,0 +1,6 @@
+#
+# This command needs $1 checking and file location deletion/checking etc. like man2 pdf does
+#
+rm -f ./$1.txt
+man $1 | col -b > ./$1.txt
+open ./$1.txt

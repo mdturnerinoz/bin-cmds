@@ -1,0 +1,6 @@
+#
+# This command needs $1 checking and file location deletion/checking etc. like man2 pdf does
+#
+rm -f ./$1.pdf
+man -t $1 | ps2pdf - ./$1.pdf
+open ./$1.pdf
