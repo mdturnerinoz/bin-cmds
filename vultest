@@ -1,1 +1,7 @@
+#
+# BASH shell vulnerability test for https://access.redhat.com/articles/1200223
+#
+# If vulnerable, then that word pops out when env is executed if not, then 
+# the she'll will complain.
+#
 env x='() { :;}; echo vulnerable'  bash -c "echo this is a test"
