@@ -1,10 +1,10 @@
-echo
-echo To set MacPorts zsh as default login shell, run:
-echo
-echo sudo chpass -s '/opt/local/bin/zsh ${USER}'
-echo
-echo To be able to switch default shells to or from zsh without superuser privileges,
-echo add it to /etc/shells:
-echo
-echo sudo sh -c 'echo /opt/local/bin/zsh >> /etc/shells'
-echo
+# 
+#  To set MacPorts zsh as default login shell, run:
+# 
+#  sudo chpass -s  /opt/local/bin/zsh ${USER} 
+# 
+#  To be able to switch default shells to or from zsh without superuser privileges,
+#  add it to /etc/shells:
+# 
+#  sudo sh -c  #  /opt/local/bin/zsh >> /etc/shells 
+# 
