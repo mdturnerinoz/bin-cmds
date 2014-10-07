@@ -1,0 +1,8 @@
+# source path/to/zshrc.sh
+# an example prompt
+# PROMPT='%B%m%~%b$(git_super_status) %# 
+#
+# website
+#
+# https://github.com/olivierverdier/zsh-git-prompt
+#
