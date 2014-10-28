@@ -1,5 +1,6 @@
-git*
-gdb*
+# I am NOT sure why the next two were added, so commented out for now.
+#git*
+#gdb*
 *.pdf
 *.ps
 *.html
