@@ -1,0 +1,25 @@
+#
+# At some point, I will make a usable shell function out of this.
+#
+# Creating a tracking connection is easy. When creating a new local branch that
+# is based on an existing remote branch, you simply use the git checkout
+# command with the --track flag set, for example:
+# 
+# git checkout —track origin/development
+# 
+# This command will create a new local branch called "development," which is
+# based on "origin/development." It will directly perform a checkout on this
+# new local branch and (thanks to the --track option) make sure that a
+# tracking relationship is set up properly.
+# When you first want to publish your local HEAD branch on a remote, you can
+# use the -u flag with the push command:
+# 
+# git push -u origin development
+# 
+# This command tells Git to publish our current local HEAD branch on the
+# "origin" remote under the name "development." The -u flag makes sure a
+# tracking connection is set up.
+# 
+# If you're curious how this works on a technical level, Git records your
+# tracking connections in its .git/config file.
+#
