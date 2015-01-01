@@ -1,0 +1,7 @@
+#
+# $1 directory being re-linked to a new location
+# $2 new directory
+#
+#!/bin/bash
+rm -f $1
+ln -s /Volumes/$2/$1 $1
