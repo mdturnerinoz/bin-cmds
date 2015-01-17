@@ -1,0 +1,6 @@
+#
+# Turn spotlight search on or off ($1 should be only "on" or "off")
+#
+#!/bin/bash
+sudo mdutil -a -i $1
+echo Spotlight $1
