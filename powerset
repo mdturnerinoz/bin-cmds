@@ -1,0 +1,10 @@
+#
+# powerset: display or alter power settings using pmset
+#
+#!/bin/bash
+if [ not -z "$1" ] ;
+then
+  sudo pmset -a sleep 180 disksleep 15 displaysleep 45
+fi
+pmset -g
+pmset -g sched
