@@ -1,0 +1,4 @@
+#
+# $1 must be TRUE or FALSE
+#
+defaults write com.apple.dock desktop-picture-show-debug-text -bool $1;killall Dock
