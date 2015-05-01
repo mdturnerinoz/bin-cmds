@@ -1,0 +1,9 @@
+#
+# This was passed to me by GHR on 1May2015 as a possible fix to the bluetooth
+# having to reboot problem I've had off and on. We will see ...
+#
+# http://lists.apple.com/archives/bluetooth-dev/2013/Aug/msg00023.html
+#
+
+sudo defaults write /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt Hybrid
+
