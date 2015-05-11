@@ -1,0 +1,4 @@
+#
+#  remove the entire Carbon Copy Cloner history
+#
+su rm -fr /Library/Application Support/com.bombich.ccc/History
