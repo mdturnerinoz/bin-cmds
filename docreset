@@ -1,0 +1,4 @@
+#
+#  Reset the Dock to its original (i.e. installed) look
+#
+defaults delete com.apple.dock; killall Dock
