@@ -6,7 +6,7 @@
 shopt -s nullglob
 me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 cnt=0
-for f in $*
+for f in $*.[Jj][Pp]*
 do
    # echo Processing file: $f
    minimumsize=100000
