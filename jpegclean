@@ -1,0 +1,20 @@
+#
+# Delete all jpeg/jpg files < 100k (they will not display well)
+#
+# syntax: jpegclean *.jp* or "*.jp*" (to ensure embedded spaces work)
+#
+shopt -s nullglob
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+cnt=0
+for f in $*
+do
+   # echo Processing file: $f
+   minimumsize=100000
+   actualsize=$(wc -c <"$f")
+   if [ $actualsize -le $minimumsize ]; then
+       echo $f size '<' $minimumsize bytes deleted '...'
+	   cnt=$((cnt + 1))
+       rm -f "$f"
+   fi
+done
+echo $me deleted $cnt small jpegs '...'
