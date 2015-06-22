@@ -9,7 +9,7 @@ cnt=0
 for f in $*.[Jj][Pp]*
 do
    # echo Processing file: $f
-   minimumsize=100000
+   minimumsize=200000
    actualsize=$(wc -c <"$f")
    if [ $actualsize -le $minimumsize ]; then
        echo $f size '<' $minimumsize bytes deleted '...'
