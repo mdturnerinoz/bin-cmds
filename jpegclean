@@ -12,7 +12,7 @@ do
    minimumsize=200000
    actualsize=$(wc -c <"$f")
    if [ $actualsize -le $minimumsize ]; then
-       echo $f size '<' $minimumsize bytes deleted '...'
+       echo "$f" size '<' $minimumsize bytes deleted '...'
 	   cnt=$((cnt + 1))
        rm -f "$f"
    fi
