@@ -10,7 +10,7 @@ cnt=0
 if [ -z $minsize ]; then
    minsize=125000
 fi
-echo $me jpeg minzie: $minsize
+echo $me minsize $minsize
 for f in $*.[Jj][Pp]*
 do
    # echo Processing file: $f
@@ -21,4 +21,4 @@ do
        rm -f "$f"
    fi
 done
-echo $me deleted $cnt small jpegs '...'
+echo $me deleted $cnt
