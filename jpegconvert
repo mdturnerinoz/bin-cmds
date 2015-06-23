@@ -12,6 +12,7 @@ do
    # echo a is $a 
    a=${f%.*}
    convert "$f" "$a.tiff"
+   rm -f "$f"
    cnt=$((cnt + 1))
 done
 echo $me converted $cnt
