@@ -1,0 +1,17 @@
+#
+# Convert jpeg/jpg to tiff
+#
+# syntax: jpegconvert *.jp* or "*.jp*" 
+#
+shopt -s nullglob
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+cnt=0
+for f in $*.[Jj][Pp]*
+do
+   # echo Processing file: $f  
+   # echo a is $a 
+   a=${f%.*}
+   convert "$f" "$a.tiff"
+   cnt=$((cnt + 1))
+done
+echo $me converted $cnt
