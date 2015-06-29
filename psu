@@ -1,0 +1,7 @@
+#
+# psu - photos set up - set up directores for photo import and mgt
+#
+mkdir capture
+mkdir master
+mkdir selects
+mkdir output
