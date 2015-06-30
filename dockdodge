@@ -1,0 +1,14 @@
+#
+# dockdodge - prevent apps from showing in the dock while running
+# we add the following two lines (sans #) to the end of an application's
+# info.plist in its .app bundle
+# This is supposed to work per:
+# http://www.cultofmac.com/202024/hide-the-dock-icon-for-any-running-app-os-x-tips/ 
+#
+# LSUIElement
+#
+# 1
+#
+sudo echo "LSUIElement" >> Info.plist
+sudo echo " " >> Info.plist
+sudo echo "1" >> Info.plist
