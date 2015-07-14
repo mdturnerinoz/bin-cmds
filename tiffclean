@@ -1,0 +1,24 @@
+#
+# Delete all tiff/TIFF files < 100k (they will not display well)
+#
+# syntax: tiffclean *.jp* or "*.jp*" (to ensure embedded spaces work)
+#         set cmdline minsize variable else defaults to 200k
+#
+shopt -s nullglob
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+cnt=0
+if [ -z $minsize ]; then
+   minsize=125000
+fi
+echo $me minsize $minsize
+for f in $*.tiff
+do
+   # echo Processing file: $f
+   actsize=$(wc -c <"$f")
+   if [ $actsize -le $minsize ]; then
+       echo "$f" size '<' $minsize bytes deleted '...'
+	   cnt=$((cnt + 1))
+       rm -f "$f"
+   fi
+done
+echo $me deleted $cnt
