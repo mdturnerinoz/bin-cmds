@@ -1,0 +1,4 @@
+#
+# My shortcut to the apple utility used to validate xcode
+#
+spctl --assess --verbose /Applications/$1

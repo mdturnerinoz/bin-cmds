@@ -5,3 +5,10 @@ mkdir capture
 mkdir master
 mkdir selects
 mkdir output
+mkdir capture/photos
+mkdir capture/videos
+#
+# I may or may not need photos and videos under the other categorries
+# depending on the "shoot" I did
+#
+
