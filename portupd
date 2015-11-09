@@ -1,2 +1,5 @@
 #!/bin/bash
+echo 
+echo REMMEBER to set the firewall down if this FAILS!!!
+echo
 sudo port selfupdate && port outdated && sudo port upgrade outdated

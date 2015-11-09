@@ -1,0 +1,4 @@
+#
+# turn off disk indexing for faster unmounts
+#
+sudo mdutil -Ei off "/Volumes/$1"; exit

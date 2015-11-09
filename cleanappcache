@@ -1,0 +1,7 @@
+# 
+# clean the app store cache
+#
+rm -fr ~/Library/Caches/com.apple.appstore
+# sudo rm -fr /private/var ... TBD figure it out
+
+

@@ -1,0 +1,5 @@
+#
+# rollover the system.log so older one can be examined and not modified
+#
+sudo newsyslog -F /var/log/system.log  
+ls /var/log/system.*
