@@ -1,0 +1,14 @@
+#
+# Change the time apps are allowed to live before being killed by Mac os x 
+# #http://www.makeuseof.com/tag/does-your-mac-take-too-long-to-shut-down-try-these-fixes/
+# 
+
+sudo defaults write /System/Library/LaunchDaemons/com.apple.coreservices.appleevents ExitTimeOut -int $1
+
+sudo defaults write /System/Library/LaunchDaemons/co\ m.apple.securityd ExitTimeOut -int $1
+
+sudo defaults write /System/Library/LaunchDaemons/c\ om.apple.mDNSResponder ExitTimeOut -int $1
+
+sudo defaults write /System/Library/LaunchDaemons/c\ om.apple.diskarbitrationd ExitTimeOut -int $1
+
+sudo defaults write /System/Library/LaunchAgents/com.apple.coreservices.appleid.authentication ExitTimeOut -int $1
