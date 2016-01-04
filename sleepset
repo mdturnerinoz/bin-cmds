@@ -1,0 +1,27 @@
+#
+# powerset: display or alter power settings using pmset
+#
+#!/bin/bash
+if [ -z "$1" ] ;
+then
+  sleep=180
+else
+  sleep=$1
+fi
+if [ -z "$2" ] ;
+then
+  disksleep=15
+else
+  disksleep=$2
+fi
+if [ -z "$3" ] ;
+then
+  displaysleep=45
+else
+  displaysleep=$3
+fi
+echo 'sleep='$sleep 'disksleep='$disksleep 'displaysleep='$displaysleep
+sudo pmset -a sleep $sleep disksleep $disksleep displaysleep $displaysleep
+rm -f /var/vm/sleepimage
+pmset -g
+pmset -g sched
