@@ -1,10 +1,27 @@
 #
-# powerset: display or alter power settings using pmset
+# powerset: display or alter poweroff and standby settings using pmset
 #
 #!/bin/bash
-if [ not -z "$1" ] ;
+if [ -z "$1" ] ;
 then
-  sudo pmset -a sleep 180 disksleep 15 displaysleep 45
+  standby=1
+  standbydelay=42600
+else
+  standby=$1
+  standbydelay=$2
 fi
+if [ -z "$3" ] ;
+then
+  autopoweroff=1
+  autopoweroffdelay=14400
+else
+  autopoweroff=$3
+  autopoweroffdelay=$4
+fi
+echo 'standby='$standby 'standbydelay='$standbydelay
+echo 'autopoweroff='$autopoweroff 'autopoweroffdelay='$autopoweroffdelay
+sudo pmset -a standby $standby standbydelay=$standbydelay
+sudo pmset -a autopoweroff $autopoweroff autopoweroffdelay $autopoweroffdelay
+rm -f /var/vm/sleepimage
 pmset -g
 pmset -g sched
