@@ -1,0 +1,4 @@
+# 
+#  see why the Mac woke up from sleeping
+#
+syslog | grep -i "Wake reason"
