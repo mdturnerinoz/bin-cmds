@@ -1,6 +1,14 @@
 #
 #  remove the entire Carbon Copy Cloner history
 #
+echo
+echo Now we will delete the CCC History ...
+echo
+sleep 1
 sudo rm -fr /Library/Application\ Support/com.bombich.ccc/History/
+echo
+echo CCC history deleted ...
+echo
+sleep 1
 ls /Library/Application\ Support/com.bombich.ccc/History/
 
