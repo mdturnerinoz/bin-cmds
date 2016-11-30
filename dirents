@@ -1,0 +1,4 @@
+#
+# Count number entries in a directory
+#
+echo `ls -l | wc -l` entries in this directory ...
