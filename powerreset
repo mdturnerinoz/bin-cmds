@@ -1,0 +1,9 @@
+sudo pmset standby           0
+sudo pmset autopoweroff      0
+sudo pmset hibernatemode     0
+sudo pmset disksleep         15
+sudo pmset displaysleep      30
+sudo pmset sleep             14400
+sudo pmset autopoweroffdelay 14400
+sudo pmset standbydelay      14400
+pmset -g
