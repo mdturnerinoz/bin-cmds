@@ -2,4 +2,6 @@
 # examine crash dumps
 #
 cd ~/Library/Logs/DiagnosticReports/
-ls *
+ls -l *.crash | echo "Number of crash dumps:" `wc -l` 
+
+
