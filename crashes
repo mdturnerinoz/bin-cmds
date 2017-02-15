@@ -1,0 +1,5 @@
+#
+# examine crash dumps
+#
+cd ~/Library/Logs/DiagnosticReports/
+ls *
