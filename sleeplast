@@ -13,11 +13,4 @@
 # 19/12/2013 5:30:04 am AE Wake  Wake [CDNVA] due to RTC/Alarm: Using AC
 #
 #!/bin/sh
-if [ -z "$1" ] ;
-then
-  cnt=2
-else 
-  cnt=$1
-fi
-#echo cnt: $cnt
-pmset -g log|grep -e "Wake \[CDNVA" -e "Software Sleep " | tail -n $cnt
+pmset -g log|grep -e " Sleep  " -e " Wake  " | tail -n 4
