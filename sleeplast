@@ -14,5 +14,5 @@ then
 else
   num=$1
 fi
-echo 'num='$num
+# echo 'num='$num
 pmset -g log|grep -e " Sleep  " -e " Wake  " | tail -n $num
