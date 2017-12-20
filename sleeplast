@@ -7,10 +7,12 @@
 #
 # params: number of latest sleep events to display (default 2)
 #
-# e.g. 
-# sleeplast
-# 18/12/2013 11:41:02 pm A Sleep Software Sleep pid=570: Using AC 2720 secs                      	
-# 19/12/2013 5:30:04 am AE Wake  Wake [CDNVA] due to RTC/Alarm: Using AC
-#
 #!/bin/sh
-pmset -g log|grep -e " Sleep  " -e " Wake  " | tail -n 4
+if [ -z "$1" ] ;
+then
+  num=4
+else
+  num=$1
+fi
+echo 'num='$num
+pmset -g log|grep -e " Sleep  " -e " Wake  " | tail -n $num
