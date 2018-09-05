@@ -1,0 +1,4 @@
+#
+# use this so Quicktime will once again use the PNG (and other) CODECS 
+#
+qtdefaults write LegacyAudioCodecsEnabled yes
