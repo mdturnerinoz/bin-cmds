@@ -1,3 +1,0 @@
-#!//opt/local/bin/zsh
-cd '/Library/Audio/Apple Loops/Apple'
-exec zsh
