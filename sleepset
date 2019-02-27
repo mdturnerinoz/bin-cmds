@@ -10,7 +10,7 @@ else
 fi
 if [ -z "$2" ] ;
 then
-  disksleep=15
+  disksleep=30
 else
   disksleep=$2
 fi
