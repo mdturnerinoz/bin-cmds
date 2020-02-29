@@ -1,0 +1,5 @@
+#
+# Turner off the badge displayed in system prefs
+#
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+killall Dock
