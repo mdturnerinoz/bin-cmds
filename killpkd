@@ -1,0 +1,4 @@
+#
+#  kill the annoying pkd process which hogs the system
+#
+launchctl stop com.apple.pluginkit.pkd
