@@ -1,0 +1,30 @@
+/* Generated with EditiX XML Editor (http://www.editix.com) at Fri Dec 27 16:54:46 CET 2013 */
+
+
+* {
+	font-family:Arial, Helvetica, sans-serif;
+	margin-bottom:4px;
+}
+
+author {
+}
+
+book title {
+	font-size:30px;
+	color:#0044FF;
+	margin-bottom:20px;
+	text-decoration:underline;
+}
+
+book chapter title {
+	font-size:20px;
+	text-decoration:normal;
+	margin-bottom:8px;
+	color:#0022FF;
+}
+
+p {
+	font-size:12px;
+	font-style:italic;
+	margin-left:20px;
+}

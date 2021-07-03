@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Your document, created at : Fri Nov 21 18:02:17 CET 2003-->
+<purchaseOrder orderDate="2002-09-24" xsi:noNamespaceSchemaLocation="purchaseOrder.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<shipTo country="FR">
+		<name>Brillant        </name>
+		<street>Bean        </street>
+		<city>CoffeeCity        </city>
+		<zip>012        </zip>
+	</shipTo>
+	<billTo country="FR">
+		<name>Holmes        </name>
+		<street>Beker Street</street>
+		<city>London        </city>
+		<zip>012        </zip>
+	</billTo>
+	<comment>Test    </comment>
+	<items>
+		<item isbn="0-1111-2222-1">
+			<producName>JXMLPad            </producName>
+			<quantity>1            </quantity>
+			<price>90            </price>
+		</item>
+	</items>
+</purchaseOrder>

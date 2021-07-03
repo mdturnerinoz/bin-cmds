@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<fo:layout-master-set>
+		<fo:simple-page-master master-name="my-page">
+			<fo:region-body margin="1cm"/>
+		</fo:simple-page-master>
+	</fo:layout-master-set>
+	<fo:page-sequence master-reference="my-page">
+		<fo:flow flow-name="xsl-region-body">
+			<fo:block border-after-color="blue" border-after-style="solid" border-after-width="1px">Personals</fo:block>
+			<fo:block color="green">Boss,Big</fo:block>
+			<fo:block color="green">Worker,One</fo:block>
+			<fo:block color="green">,Two</fo:block>
+			<fo:block color="green">Worker,Three</fo:block>
+			<fo:block color="green">Worker,Four</fo:block>
+			<fo:block color="green">Worker,Five</fo:block>
+			<fo:block color="green">Boss,Big</fo:block>
+		</fo:flow>
+	</fo:page-sequence>
+</fo:root>

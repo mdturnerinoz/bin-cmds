@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlform purchaseOrder.exf?>
+
+<purchaseOrder orderDate="01-01-2010">
+	<shipTo country="Italy">
+		<name>M. Goodeal</name>
+		<street>213 street</street>
+		<city>valentina</city>
+		<zip>4564</zip>
+	</shipTo>
+	<billTo country="Italy">
+		<name>M. Goodeal</name>
+		<street>213 street</street>
+		<city>valentina</city>
+		<zip>4564</zip>
+	</billTo>
+	<status>InProcess</status>
+	<comment>This command is being processed</comment>
+	<items>
+		<item isbn="0123456789">
+			<producName>toy-car</producName>
+			<quantity>50</quantity>
+			<price>133</price>
+			<comment>Ok for stock</comment>
+			<shipDate>02-01-2010</shipDate>
+		</item>
+	</items>
+</purchaseOrder>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Fri Dec 27 16:53:15 CET 2013 -->
+
+
+<!-- Go to the Visual Editor for Editing -->
+
+
+<?xml-stylesheet type="text/css" href="book.css"?>
+
+
+<book>
+	<title>My nice book</title>
+	<author>By Alexandre Brillant</author>
+	<chapter>
+		<title>Chapter One</title>
+		<p>First paragraph</p>
+		<p>Second paragraph</p>
+	</chapter>
+	<chapter>
+		<title>Chapter Two</title>
+		<p>First paragraph</p>
+		<p>Second paragraph</p>
+	</chapter>
+	<chapter>
+		<title>Chapter Three</title>
+		<p>First paragraph</p>
+		<p>Second paragraph</p>
+		<p>Third paragraph</p>
+	</chapter>
+</book>

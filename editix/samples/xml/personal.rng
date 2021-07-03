@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated from data\relaxng\personal.dtd-->
+<grammar datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns="http://relaxng.org/ns/structure/1.0">
+	<start>
+		<choice>
+			<element name="personnel">
+				<ref name="T_personnel"/>
+			</element>
+			<element name="person">
+				<ref name="T_person"/>
+			</element>
+			<element name="name">
+				<ref name="T_name"/>
+			</element>
+			<element name="family">
+				<ref name="T_family"/>
+			</element>
+			<element name="given">
+				<ref name="T_given"/>
+			</element>
+			<element name="email">
+				<ref name="T_email"/>
+			</element>
+			<element name="url">
+				<ref name="T_url"/>
+			</element>
+			<element name="link">
+				<ref name="T_link"/>
+			</element>
+		</choice>
+	</start><!--<!ELEMENT personnel (person)+>-->
+	<define name="T_personnel">
+		<oneOrMore>
+			<element name="person">
+				<ref name="T_person"/>
+			</element>
+		</oneOrMore>
+	</define><!--<!ELEMENT person (name,email*,url*,link?)>-->
+	<define name="T_person">
+		<group>
+			<element name="name">
+				<ref name="T_name"/>
+			</element>
+			<zeroOrMore>
+				<element name="email">
+					<ref name="T_email"/>
+				</element>
+			</zeroOrMore>
+			<zeroOrMore>
+				<element name="url">
+					<ref name="T_url"/>
+				</element>
+			</zeroOrMore>
+			<optional>
+				<element name="link">
+					<ref name="T_link"/>
+				</element>
+			</optional>
+		</group><!--<!ATTLIST person id ID #REQUIRED>-->
+		<attribute name="id">
+			<data type="ID"/>
+		</attribute><!--<!ATTLIST person note CDATA #IMPLIED>-->
+		<optional>
+			<attribute name="note">
+				<text/>
+			</attribute>
+		</optional><!--<!ATTLIST person contr (true|false) "false">-->
+		<optional>
+			<attribute name="contr">
+				<choice>
+					<value>true</value>
+					<value>false</value>
+				</choice>
+			</attribute>
+		</optional><!--<!ATTLIST person salary CDATA #IMPLIED>-->
+		<optional>
+			<attribute name="salary">
+				<data type="double"/><!-- Added by Ac -->
+			</attribute>
+		</optional>
+	</define><!--<!ELEMENT name ((family,given)|(given,family))>-->
+	<define name="T_name">
+		<choice>
+			<group>
+				<element name="family">
+					<ref name="T_family"/>
+				</element>
+				<element name="given">
+					<ref name="T_given"/>
+				</element>
+			</group>
+			<group>
+				<element name="given">
+					<ref name="T_given"/>
+				</element>
+				<element name="family">
+					<ref name="T_family"/>
+				</element>
+			</group>
+		</choice>
+	</define><!--<!ELEMENT family (#PCDATA)>-->
+	<define name="T_family">
+		<text/>
+	</define><!--<!ELEMENT given (#PCDATA)>-->
+	<define name="T_given">
+		<text/>
+	</define><!--<!ELEMENT email (#PCDATA)>-->
+	<define name="T_email">
+		<text/>
+	</define><!--<!ELEMENT url EMPTY>-->
+	<define name="T_url"><!--<!ATTLIST url href CDATA "http://">-->
+		<optional>
+			<attribute name="href">
+				<text/>
+			</attribute>
+		</optional>
+	</define><!--<!ELEMENT link EMPTY>-->
+	<define name="T_link"><!--<!ATTLIST link manager IDREF #IMPLIED>-->
+		<optional>
+			<attribute name="manager">
+				<data type="IDREF"/>
+			</attribute>
+		</optional><!--<!ATTLIST link subordinates IDREFS #IMPLIED>-->
+		<optional>
+			<attribute name="subordinates">
+				<data type="IDREFS"/>
+			</attribute>
+		</optional>
+	</define>
+</grammar>

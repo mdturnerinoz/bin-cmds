@@ -1,0 +1,22 @@
+<project default="jar">
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="build/classes"/>
+	<javac srcdir="src" destdir="build/classes" source="1.5" target="1.5" fork="true" includeantruntime="false">
+		<classpath>
+			<pathelement location="../../../lib/editix.jar"/>
+		</classpath>
+	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build"/>
+        <jar destfile="build/Basic.jar" basedir="build/classes">
+        </jar>
+    </target>
+
+</project>

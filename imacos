@@ -1,0 +1,6 @@
+#
+#  install macOS on a thumb drive
+#
+sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/'Install macOS Big Sur'
+
+

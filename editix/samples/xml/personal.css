@@ -1,0 +1,42 @@
+/* Generated with EditiX XML Editor (http://www.editix.com) at Thu Dec 26 14:42:30 CET 2013 */
+
+* {
+	font-family:Arial, Helvetica, sans-serif;
+	color:red;
+}
+
+name {
+	background-color:#EEE;
+	margin-left:20px;
+}
+
+family {
+	font-size:14px;
+	font-weight:bold;
+	display:inline;
+	width:200px;
+	
+	
+border:1px solid black;
+	
+border-right-style:none;
+}
+
+given {
+	font-size:14px;
+	color:orange;
+	font-style:italic;
+	display:inline;
+	width:200px;
+	
+border:1px solid black;
+}
+
+email {
+	color:blue;
+	text-decoration:underline;
+	display:block;
+	width:400px;
+	margin-left:20px;
+	background-color:rgba( 200, 230,200 );
+}

@@ -1,0 +1,5 @@
+#
+#
+#
+
+lipo -archs /Applications/$1/Contents/MacOS/$1

@@ -1,0 +1,6 @@
+# 
+# redo finer so it stops running so FUCKING SLOW!!!
+#
+# you will need to redo all Finder Preferences though!
+#
+sudo rm -fr ~/Library/Preferences/com.apple.finder.plist
